@@ -7,7 +7,7 @@ from backend.routes import allowed_users
 auth_bp = Blueprint("auth", __name__)
 
 
-@auth_bp.route("/login", methods=["POSt"])
+@auth_bp.route("/login", methods=["POST"])
 def login():
     d = request.json
     if "username" not in d or "password" not in d:
